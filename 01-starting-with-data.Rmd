@@ -226,9 +226,9 @@ If we do not provide a slice for either rows or columns, e.g. `dat[ , ]`, R retu
 
 ```{r}
 # All columns from row 5
-dat[5, ]
+dat[5,]
 # All rows from column 16
-dat[ , 16]
+dat[,16]
 ```
 
 Now let's perform some common mathematical operations to learn about our inflammation data.
@@ -237,7 +237,7 @@ One way to do this is to select the data we want, create a new temporary data fr
 
 ```{r}
 # first row, all of the columns
-patient_1 <- dat[1, ]
+patient_1 <- dat[1,]
 # max inflammation for patient 1
 max(patient_1)
 ```
@@ -247,20 +247,20 @@ Instead, we can combine the selection and the function call:
 
 ```{r}
 # max inflammation for patient 2
-max(dat[2, ])
+max(dat[2,])
 ```
 
 R also has functions for other commons calculations, e.g. finding the minimum, mean, median, and standard deviation of the data:
 
 ```{r}
 # minimum inflammation on day 7
-min(dat[ , 7])
+min(dat[,7])
 # mean inflammation on day 7
-mean(dat[ , 7])
+mean(dat[,7])
 # median inflammation on day 7
-median(dat[ , 7])
+median(dat[,7])
 # standard deviation of inflammation on day 7
-sd(dat[ , 7])
+sd(dat[,7])
 ```
 
 What if we need the maximum inflammation for all patients, or the average for each day?
@@ -327,10 +327,10 @@ element[4:6]
 > To do this you would extract the relevant slice from the data frame and calculate the maximum value.  
 > Which of the following lines of R code gives the correct answer?
 >
-> (a) `max(dat[5, ])`
-> (b) `max(dat[3:7, 5])`
-> (c) `max(dat[5, 3:7])`
-> (d) `max(dat[5, 3, 7])`
+> (a) `max(dat[5,])`
+> (b) `max(dat[3:7,5])`
+> (c) `max(dat[5,3:7])`
+> (d) `max(dat[5,3,7])`
 
 ### Plotting
 
